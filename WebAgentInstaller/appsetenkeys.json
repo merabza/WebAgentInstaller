@@ -1,0 +1,13 @@
+{
+    "Keys": [
+        "Serilog:WriteTo:1:Args:path",
+        "ApiKeys:AppSettingsByApiKey",
+        "InstallerSettings:InstallerWorkFolder",
+        "InstallerSettings:InstallFolder",
+        "InstallerSettings:DotnetRunner",
+        "InstallerSettings:InstallerProgramPath",
+        "InstallerSettings:WebAgentInstallerParametersPath",
+        "FileStorages:*:FileStoragePath",
+        "FileStorages:*:RemoteFileServerConnectionData"
+    ]
+}
