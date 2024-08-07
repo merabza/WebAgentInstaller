@@ -34,19 +34,20 @@ try
 
     var debugMode = builder.Environment.IsDevelopment();
 
-    builder.InstallServices(debugMode, args, parameters,
-        //WebSystemTools
-        AssemblyReference.Assembly,
-        ConfigurationEncrypt.AssemblyReference.Assembly,
-        SerilogLogger.AssemblyReference.Assembly,
-        SwaggerTools.AssemblyReference.Assembly,
-        TestToolsApi.AssemblyReference.Assembly,
-        WindowsServiceTools.AssemblyReference.Assembly,
-        SignalRMessages.AssemblyReference.Assembly,
+    if (!builder.InstallServices(debugMode, args, parameters,
+            //WebSystemTools
+            AssemblyReference.Assembly,
+            ConfigurationEncrypt.AssemblyReference.Assembly,
+            SerilogLogger.AssemblyReference.Assembly,
+            SwaggerTools.AssemblyReference.Assembly,
+            TestToolsApi.AssemblyReference.Assembly,
+            WindowsServiceTools.AssemblyReference.Assembly,
+            SignalRMessages.AssemblyReference.Assembly,
 
-        //WebAgentShared
-        LibProjectsApi.AssemblyReference.Assembly
-    );
+            //WebAgentShared
+            LibProjectsApi.AssemblyReference.Assembly
+        ))
+        return 2;
 
     builder.Services.AddMediatR(cfg =>
     {
@@ -59,7 +60,8 @@ try
 // ReSharper disable once using
     using var app = builder.Build();
 
-    app.UseServices(debugMode);
+    if ( ! app.UseServices(debugMode) )
+        return 3;
 
 
     Log.Information("Directory.GetCurrentDirectory() = {0}", Directory.GetCurrentDirectory());
