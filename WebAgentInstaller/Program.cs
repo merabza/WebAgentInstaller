@@ -60,7 +60,7 @@ try
 // ReSharper disable once using
     using var app = builder.Build();
 
-    if ( ! app.UseServices(debugMode) )
+    if (!app.UseServices(debugMode))
         return 3;
 
 
