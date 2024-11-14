@@ -71,6 +71,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiContracts", "..\SystemTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringMessagesApiContracts", "..\SystemTools\StringMessagesApiContracts\StringMessagesApiContracts.csproj", "{9150C6D4-C30C-488F-B080-CD4F30644437}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeyIdentity", "..\WebSystemTools\ApiKeyIdentity\ApiKeyIdentity.csproj", "{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiKeysManagement", "..\SystemTools\ApiKeysManagement\ApiKeysManagement.csproj", "{896C2FBF-A09B-4433-9848-3B267C699DCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -185,6 +189,14 @@ Global
 		{9150C6D4-C30C-488F-B080-CD4F30644437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9150C6D4-C30C-488F-B080-CD4F30644437}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9150C6D4-C30C-488F-B080-CD4F30644437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{896C2FBF-A09B-4433-9848-3B267C699DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{896C2FBF-A09B-4433-9848-3B267C699DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{896C2FBF-A09B-4433-9848-3B267C699DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{896C2FBF-A09B-4433-9848-3B267C699DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +228,8 @@ Global
 		{E759DF0A-0129-40FE-A8D2-AF6481C59FB7} = {AA9E5CC5-27FF-420B-98F5-3970BD383043}
 		{DEA26BE0-7C1C-41F1-9710-DFC1E9009BDC} = {AA9E5CC5-27FF-420B-98F5-3970BD383043}
 		{9150C6D4-C30C-488F-B080-CD4F30644437} = {AA9E5CC5-27FF-420B-98F5-3970BD383043}
+		{B8F0D7FD-3140-417C-A3CC-82CBEDD5C18C} = {0CB0E335-2BCA-4A02-8B29-E27F14ACF1F6}
+		{896C2FBF-A09B-4433-9848-3B267C699DCA} = {AA9E5CC5-27FF-420B-98F5-3970BD383043}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25530352-932B-41E7-B697-44F6CF8A9E75}

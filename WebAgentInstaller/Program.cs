@@ -9,7 +9,6 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using SwaggerTools;
 using WebInstallers;
-using AssemblyReference = ApiExceptionHandler.AssemblyReference;
 
 //პროგრამის ატრიბუტების დაყენება 
 //ProgramAttributes.Instance.SetAttribute("AppName", "WebAgentInstaller");
@@ -36,7 +35,8 @@ try
 
     if (!builder.InstallServices(debugMode, args, parameters,
             //WebSystemTools
-            AssemblyReference.Assembly,
+            ApiExceptionHandler.AssemblyReference.Assembly,
+            ApiKeyIdentity.AssemblyReference.Assembly,
             ConfigurationEncrypt.AssemblyReference.Assembly,
             SerilogLogger.AssemblyReference.Assembly,
             SwaggerTools.AssemblyReference.Assembly,
