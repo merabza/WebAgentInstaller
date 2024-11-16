@@ -8,20 +8,25 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using SwaggerTools;
+using SystemToolsShared;
 using WebInstallers;
+using AssemblyReference = ApiExceptionHandler.AssemblyReference;
 
-//პროგრამის ატრიბუტების დაყენება 
-//ProgramAttributes.Instance.SetAttribute("AppName", "WebAgentInstaller");
-//ProgramAttributes.Instance.SetAttribute("VersionCount", 1);
-//ProgramAttributes.Instance.SetAttribute("UseSwaggerWithJWTBearer", false);
-//ProgramAttributes.Instance.SetAttribute("AppKey", "C0090D12-DC4F-4A15-A7F8-A024E241DB1A");
 try
 {
+//პროგრამის ატრიბუტების დაყენება 
+    const string appName = "WebAgentInstaller";
+    const string appKey = "C0090D12-DC4F-4A15-A7F8-A024E241DB1A";
+
+//პროგრამის ატრიბუტების დაყენება 
+    ProgramAttributes.Instance.AppName = appName;
+    ProgramAttributes.Instance.AppName = appKey;
+
     var parameters = new Dictionary<string, string>
     {
         //{ SignalRMessagesInstaller.SignalRReCounterKey, string.Empty },//Allow SignalRReCounterKey
-        { ConfigurationEncryptInstaller.AppKeyKey, "C0090D12-DC4F-4A15-A7F8-A024E241DB1A" },
-        { SwaggerInstaller.AppNameKey, "WebAgentInstaller" },
+        { ConfigurationEncryptInstaller.AppKeyKey, appKey },
+        { SwaggerInstaller.AppNameKey, appName },
         { SwaggerInstaller.VersionCountKey, 1.ToString() }
         //{ SwaggerInstaller.UseSwaggerWithJwtBearerKey, string.Empty },//Allow Swagger
     };
@@ -35,7 +40,7 @@ try
 
     if (!builder.InstallServices(debugMode, args, parameters,
             //WebSystemTools
-            ApiExceptionHandler.AssemblyReference.Assembly,
+            AssemblyReference.Assembly,
             ApiKeyIdentity.AssemblyReference.Assembly,
             ConfigurationEncrypt.AssemblyReference.Assembly,
             HttpClientInstaller.AssemblyReference.Assembly,
