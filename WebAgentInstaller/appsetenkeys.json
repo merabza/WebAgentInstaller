@@ -5,9 +5,11 @@
         "InstallerSettings:InstallerWorkFolder",
         "InstallerSettings:InstallFolder",
         "InstallerSettings:DotnetRunner",
-        "InstallerSettings:InstallerProgramPath",
-        "InstallerSettings:WebAgentInstallerParametersPath",
-        "FileStorages:*:FileStoragePath",
-        "FileStorages:*:RemoteFileServerConnectionData"
+        "AppSettings:FileStorages:*:FileStoragePath",
+        "AppSettings:FileStorages:*:UserName",
+        "AppSettings:FileStorages:*:Password",
+        "InstallerSettings:ServiceUserName",
+        "InstallerSettings:FilesUserName",
+        "InstallerSettings:FilesUsersGroupName"
     ]
 }
