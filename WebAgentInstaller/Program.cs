@@ -32,27 +32,21 @@ try
     };
     var builder = WebApplication.CreateBuilder(new WebApplicationOptions
     {
-        ContentRootPath = AppContext.BaseDirectory,
-        Args = args
+        ContentRootPath = AppContext.BaseDirectory, Args = args
     });
 
     var debugMode = builder.Environment.IsDevelopment();
 
     if (!builder.InstallServices(debugMode, args, parameters,
             //WebSystemTools
-            AssemblyReference.Assembly,
-            ApiKeyIdentity.AssemblyReference.Assembly,
-            ConfigurationEncrypt.AssemblyReference.Assembly,
-            HttpClientInstaller.AssemblyReference.Assembly,
-            SerilogLogger.AssemblyReference.Assembly,
-            SwaggerTools.AssemblyReference.Assembly,
-            TestToolsApi.AssemblyReference.Assembly,
-            WindowsServiceTools.AssemblyReference.Assembly,
+            AssemblyReference.Assembly, ApiKeyIdentity.AssemblyReference.Assembly,
+            ConfigurationEncrypt.AssemblyReference.Assembly, HttpClientInstaller.AssemblyReference.Assembly,
+            SerilogLogger.AssemblyReference.Assembly, SwaggerTools.AssemblyReference.Assembly,
+            TestToolsApi.AssemblyReference.Assembly, WindowsServiceTools.AssemblyReference.Assembly,
             SignalRMessages.AssemblyReference.Assembly,
 
             //WebAgentShared
-            LibProjectsApi.AssemblyReference.Assembly
-        ))
+            LibProjectsApi.AssemblyReference.Assembly))
         return 2;
 
     builder.Services.AddMediatR(cfg =>
