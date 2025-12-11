@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using ConfigurationEncrypt;
 using FluentValidationInstaller;
 using Microsoft.AspNetCore.Builder;
@@ -6,9 +9,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using SwaggerTools;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using SystemToolsShared;
 using WebInstallers;
 using AssemblyReference = ApiExceptionHandler.AssemblyReference;
