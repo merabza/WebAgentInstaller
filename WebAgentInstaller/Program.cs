@@ -1,21 +1,21 @@
 using System;
 using System.IO;
 using System.Reflection;
-using ApiKeyIdentity.DependencyInjection;
-using ConfigurationEncrypt;
 using Figgle.Fonts;
-using LibProjectsApi;
-using LibProjectsApi.DependencyInjection;
-using MediatorTools.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using SerilogLogger;
-using SignalRMessages.DependencyInjection;
-using SwaggerTools.DependencyInjection;
-using TestToolsApi.DependencyInjection;
-using WindowsServiceTools;
+using WebAgentShared.LibProjectsApi;
+using WebAgentShared.LibProjectsApi.DependencyInjection;
+using WebSystemTools.ApiKeyIdentity.DependencyInjection;
+using WebSystemTools.ConfigurationEncrypt;
+using WebSystemTools.MediatorTools.DependencyInjection;
+using WebSystemTools.SerilogLogger;
+using WebSystemTools.SignalRMessages.DependencyInjection;
+using WebSystemTools.SwaggerTools.DependencyInjection;
+using WebSystemTools.TestToolsApi.DependencyInjection;
+using WebSystemTools.WindowsServiceTools;
 
 //using AssemblyReference = ApiExceptionHandler.AssemblyReference;
 
