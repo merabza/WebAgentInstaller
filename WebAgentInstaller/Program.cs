@@ -27,7 +27,7 @@ try
     const string appKey = "C0090D12-DC4F-4A15-A7F8-A024E241DB1A";
     const int versionCount = 1;
 
-    var header = $"{appName} {Assembly.GetEntryAssembly()?.GetName().Version}";
+    string header = $"{appName} {Assembly.GetEntryAssembly()?.GetName().Version}";
     Console.WriteLine(FiggleFonts.Standard.Render(header));
 
     //var parameters = new Dictionary<string, string>
@@ -44,7 +44,7 @@ try
         ContentRootPath = AppContext.BaseDirectory, Args = args
     });
 
-    var debugMode = builder.Environment.IsDevelopment();
+    bool debugMode = builder.Environment.IsDevelopment();
 
     ILogger logger = builder.Host.UseSerilogLogger(debugMode, builder.Configuration);
     ILogger? debugLogger = debugMode ? logger : null;
@@ -110,7 +110,7 @@ try
     //builder.Services.InstallValidation(LibProjectsApi.AssemblyReference.Assembly);
 
     // ReSharper disable once using
-    await using var app = builder.Build();
+    await using WebApplication app = builder.Build();
 
     // ReSharper disable once RedundantArgumentDefaultValue
     app.UseSwaggerServices(debugLogger, versionCount);
