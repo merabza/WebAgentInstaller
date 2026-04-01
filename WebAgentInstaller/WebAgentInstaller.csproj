@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\WebAgentShared\WebAgentShared.LibProjectsApi\WebAgentShared.LibProjectsApi.csproj" />
-    <ProjectReference Include="..\..\WebSystemTools\WebSystemTools.ApiExceptionHandler\WebSystemTools.ApiExceptionHandler.csproj" />
     <ProjectReference Include="..\..\WebSystemTools\WebSystemTools.ApiKeyIdentity\WebSystemTools.ApiKeyIdentity.csproj" />
     <ProjectReference Include="..\..\WebSystemTools\WebSystemTools.ConfigurationEncrypt\WebSystemTools.ConfigurationEncrypt.csproj" />
     <ProjectReference Include="..\..\WebSystemTools\WebSystemTools.MediatorTools\WebSystemTools.MediatorTools.csproj" />
