@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using SystemTools.SystemToolsShared.DependencyInjection;
 using WebAgentShared.LibProjectsApi;
 using WebAgentShared.LibProjectsApi.DependencyInjection;
 using WebSystemTools.ApiKeyIdentity.DependencyInjection;
@@ -62,7 +63,11 @@ try
         //.AddSupportToolsServerPersistence(builder.Configuration, debugMode)
         .AddMediator(debugLogger,
             builder.Configuration,
-            AssemblyReference.Assembly);
+            AssemblyReference.Assembly)
+        .AddApplication(x =>
+        {
+            x.AppName = appName;
+        });
     //.AddSupportToolsServerApiKeyIdentity(debugMode)
     //.AddAllScopedServiceSupportToolsServerApplication()
     //.AddSupportToolsServerQueryRepositories(debugMode)
