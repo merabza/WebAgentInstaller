@@ -30,7 +30,6 @@
   <Folder Name="/ToolsManagement/">
     <Project Path="../ToolsManagement/ToolsManagement.FileManagersMain/ToolsManagement.FileManagersMain.csproj" />
     <Project Path="../ToolsManagement/ToolsManagement.Installer/ToolsManagement.Installer.csproj" />
-    <Project Path="../ToolsManagement/ToolsManagement.LibToolActions/ToolsManagement.LibToolActions.csproj" />
   </Folder>
   <Folder Name="/WebAgentContracts/">
     <Project Path="../WebAgentContracts/WebAgentContracts.WebAgentProjectsApiContracts/WebAgentContracts.WebAgentProjectsApiContracts.csproj" />
