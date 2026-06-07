@@ -26,7 +26,7 @@ try
     Console.WriteLine("Loading...");
 
     const string appName = "WebAgentInstaller";
-    const string appKey = "C0090D12-DC4F-4A15-A7F8-A024E241DB1A";
+    //const string appKey = "C0090D12-DC4F-4A15-A7F8-A024E241DB1A";
     const int versionCount = 1;
 
     string header = $"{appName} {Assembly.GetEntryAssembly()?.GetName().Version}";
@@ -53,7 +53,7 @@ try
 
     builder.Host.UseWindowsServiceOnWindows(debugLogger, args);
 
-    builder.Configuration.AddConfigurationEncryption(debugLogger, appKey);
+    //builder.Configuration.AddConfigurationEncryption(debugLogger, appKey);
 
     // @formatter:off
     builder.Services.AddHttpClient()
