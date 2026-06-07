@@ -14,6 +14,7 @@ using WebSystemTools.ConfigurationEncrypt;
 using WebSystemTools.MediatorTools.DependencyInjection;
 using WebSystemTools.SerilogLogger;
 using WebSystemTools.SignalRMessages.DependencyInjection;
+using WebSystemTools.SignalRMessages.Endpoints.V1;
 using WebSystemTools.SwaggerTools.DependencyInjection;
 using WebSystemTools.TestToolsApi.DependencyInjection;
 using WebSystemTools.WindowsServiceTools;
@@ -121,6 +122,8 @@ try
     app.UseSwaggerServices(debugLogger, versionCount);
     app.UseTestToolsApiEndpoints(debugLogger);
     //app.UseSignalRRecounterMessages(debugMode);
+    app.UseSignalRMessagesHub(debugMode);
+
 
     app.UseLibProjectsApi(debugMode);
 
