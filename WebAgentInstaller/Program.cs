@@ -61,7 +61,7 @@ try
     app.UseTestToolsApiEndpoints(debugLogger);
     app.UseSignalRMessagesHub(debugLogger);
 
-    app.UseLibProjectsApi(debugMode);
+    app.UseLibProjectsApi(debugLogger);
 
     Log.Information("Directory.GetCurrentDirectory() = {0}", Directory.GetCurrentDirectory());
     Log.Information("AppContext.BaseDirectory = {0}", AppContext.BaseDirectory);
