@@ -1,9 +1,17 @@
 <Project>
-    <PropertyGroup>
-        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.27.0.140913" />
-        <PackageVersion Include="Figgle.Fonts" Version="0.6.6" />
-    </ItemGroup>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="SonarAnalyzer.CSharp" Version="10.27.0.140913" />
+    <PackageVersion Include="Figgle.Fonts" Version="0.6.6" />
+    <PackageVersion Include="WebAgentShared.LibProjectsApi" Version="1.0.9686.36050" />
+    <PackageVersion Include="WebSystemTools.ApiKeyIdentity" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.MediatorTools" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.SerilogLogger" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.SignalRMessages" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.SwaggerTools" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.TestToolsApi" Version="1.0.9686.34761" />
+    <PackageVersion Include="WebSystemTools.WindowsServiceTools" Version="1.0.9686.34761" />
+  </ItemGroup>
 </Project>
