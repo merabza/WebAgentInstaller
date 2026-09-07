@@ -48,7 +48,7 @@ try
         .AddMediator(debugLogger,
             builder.Configuration,
             AssemblyReference.Assembly)
-        .AddApplication(x =>
+        .AddApp(x =>
         {
             x.AppName = appName;
         });
